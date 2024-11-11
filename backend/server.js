@@ -6,6 +6,8 @@ require("./config/db");
 const User = require("./routes/user");
 const Books = require("./routes/book");
 const Favourite = require("./routes/favourite");
+const Cart = require("./routes/cart");
+const Order = require("./routes/order");
 // app.get("/", (req, res) => {
 //   res.send("Hello From backend site");
 // });;
@@ -15,6 +17,8 @@ app.use(express.json());
 app.use("/users", User);
 app.use("/books", Books);
 app.use("/fav", Favourite);
+app.use("/cart", Cart);
+app.use("/order", Order);
 
 app.get("/", (req, res) => {
   res.status(200).json("Welcome");
